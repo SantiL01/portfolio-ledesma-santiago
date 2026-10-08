@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio personal de Santiago Ledesma">
+  <title>Santiago Ledesma | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="#inicio" class="logo">Santiago Ledesma</a>
+    <nav class="nav">
+      <ul class="nav-lista">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <button id="btn-tema" type="button">Modo oscuro</button>
+  </header>
+
+  <main>
+
+    <!-- INICIO -->
+    <section id="inicio" class="inicio">
+      <div class="inicio-texto">
+        <p class="saludo">Hola, soy</p>
+        <h1>Santiago Ledesma</h1>
+        <p>Estudiante de la Tecnicatura en Programación e Innovaciones Tecnológicas, con ganas de aprender y crear soluciones.</p>
+        <p><strong>Área de interés:</strong> Desarrollo web / Desarrollo backend / Desarrollo de software</p>
+        <a href="#proyectos" class="btn">Ver mis proyectos</a>
+      </div>
+      <img src="img/img-me.jpeg" alt="Foto de perfil de Santiago Ledesma" class="inicio-img">
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>
+        Trabajo en multimedios por la mañana y soy estudiante de Programación por la noche, con un gran interés en el desarrollo de software y la creación de soluciones innovadoras. 
+        Me gusta aprender nuevas tecnologías y mejorar mis habilidades constantemente.
+      </p>
+
+      <article class="bloque">
+        <h3>Formación</h3>
+        <ul>
+          <li>Tecnicatura en Programación e Innovaciones Tecnológicas - INCADE</li>
+          <li>Introduccion a la Programación - Silicon Misiones</li>
+          <li>Prompt Engineering - Silicon Misiones</li>
+          <li>Python Intermedio para Ciencias de datos - Silicon Misiones</li>
+          <li>Bases de datos - Silicon Misiones</li>
+        </ul>
+      </article>
+
+      <article class="bloque">
+        <h3>Intereses</h3>
+        <ul>
+          <li>Aprender desarrollo Backend</li>
+          <li>Aprender desarrollo Frontend</li>
+          <li>Aprender a crear y gestionar bases de datos eficientes</li>
+          <li>Mejorar mi analisis para crear sistemas eficiente o proponer mejoras</li>
+        </ul>
+      </article>
+
+      <article class="bloque">
+        <h3>Habilidades y tecnologías</h3>
+        <ul class="habilidades">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>Java</li>
+          <li>SQL</li>
+          <li>Git y GitHub</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="proyectos">
+      <h2>Proyectos</h2>
+      <div class="proyectos-grid">
+
+        <article class="tarjeta">
+          <img src="img/proyecto1.png" alt="Captura del proyecto TechDex">
+          <h3>TechDex</h3>
+          <p>[Descripción breve del proyecto.]</p>
+          <p class="tecnologias"><strong>Tecnologías:</strong> Java, Swing, JPA</p>
+          <a href="#" target="_blank" rel="noopener">Ver proyecto</a>
+        </article>
+
+        <article class="tarjeta">
+          <img src="img/proyecto2.png" alt="Captura del proyecto e-commerce">
+          <h3>Base de datos E-commerce</h3>
+          <p>[Descripción breve del proyecto.]</p>
+          <p class="tecnologias"><strong>Tecnologías:</strong> SQL, draw.io</p>
+          <a href="#" target="_blank" rel="noopener">Ver proyecto</a>
+        </article>
+
+        <article class="tarjeta">
+          <img src="img/proyecto3.png" alt="Captura de la app de presupuestos">
+          <h3>App de presupuestos</h3>
+          <p>[Descripción breve del proyecto.]</p>
+          <p class="tecnologias"><strong>Tecnologías:</strong> Java, Android Studio</p>
+          <a href="#" target="_blank" rel="noopener">Ver proyecto</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contacto">
+      <h2>Contacto</h2>
+      <form id="form-contacto" novalidate>
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+        <span class="error" id="error-nombre"></span>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="tu@email.com">
+        <span class="error" id="error-email"></span>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" maxlength="300" placeholder="Escribí tu mensaje"></textarea>
+        <small id="contador">0 / 300</small>
+        <span class="error" id="error-mensaje"></span>
+
+        <button type="submit" class="btn">Enviar</button>
+        <p id="resultado" class="resultado"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Santiago Ledesma. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
