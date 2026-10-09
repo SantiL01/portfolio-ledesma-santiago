@@ -10,7 +10,7 @@
 <body>
 
   <header class="header">
-    <a href="#inicio" class="logo">Santiago Ledesma</a>
+    <a href="#inicio" class="logo">Mi Portfolio personal</a>
     <nav class="nav">
       <ul class="nav-lista">
         <li><a href="#inicio">Inicio</a></li>
@@ -89,7 +89,7 @@
           <h3>TechDex</h3>
           <p>[Descripción breve del proyecto.]</p>
           <p class="tecnologias"><strong>Tecnologías:</strong> Java, Swing, JPA</p>
-          <a href="#" target="_blank" rel="noopener">Ver proyecto</a>
+          <a href="#" target="_blank" rel="noopener">Ver proyecto</a> <!-- Link para ver el proyecto, targer="_blank" abre en pestaña nueva.-->
         </article>
 
         <article class="tarjeta">
@@ -97,7 +97,7 @@
           <h3>Base de datos E-commerce</h3>
           <p>[Descripción breve del proyecto.]</p>
           <p class="tecnologias"><strong>Tecnologías:</strong> SQL, draw.io</p>
-          <a href="#" target="_blank" rel="noopener">Ver proyecto</a>
+          <a href="#" target="_blank" rel="noopener">Ver proyecto</a> <!-- rel="noopener es una medida de seguriada para los links" -->
         </article>
 
         <article class="tarjeta">
@@ -114,14 +114,14 @@
     <!-- CONTACTO -->
     <section id="contacto" class="contacto">
       <h2>Contacto</h2>
-      <form id="form-contacto" novalidate>
+      <form id="form-contacto" novalidate> <!-- novalidate apaga la validacion automatica del navegador -->
 
         <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre"> <!-- placeholder es el texto gris de ayuda que desaparece cuando escriben -->
         <span class="error" id="error-nombre"></span>
 
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="tu@email.com">
+        <input type="email" id="email" name="email" placeholder="tu@email.com"> <!-- name es el noombre con el que viajara el dato si el formulario se envia a un servidor-->
         <span class="error" id="error-email"></span>
 
         <label for="mensaje">Mensaje</label>
