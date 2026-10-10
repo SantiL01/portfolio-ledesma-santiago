@@ -171,12 +171,79 @@ h2 {
   max-width: 500px;
 }
 
-.inicio-img {
+.flip {
   width: 280px;
   height: 280px;
+  position: relative;
+  perspective: 1000px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  box-shadow: 15px 15px 30px var(--color-borde),
+             -15px -15px 30px var(--color-borde);
+}
+
+.flip::after {
+  content: attr(data-mensaje);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-top: 16px;
+  padding: 0.4rem 1rem;
+  background-color: var(--color-principal);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  border-radius: 999px;
+  opacity: 0;
+  transform: translate(-50%, -8px);
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 2;
+}
+
+.flip:hover::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  transition-delay: 0.3s;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  border-radius: 50%;
+}
+
+.flip:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-cara {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 50%;
   border: 5px solid var(--color-principal);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-github {
+  transform: rotateY(180deg);
+  overflow: hidden;
+}
+
+.flip-github img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* ========== 5. SOBRE MÍ ========== */
@@ -435,7 +502,7 @@ textarea.valido {
     font-size: 2.2rem;
   }
 
-  .inicio-img {
+  .flip {
     width: 200px;
     height: 200px;
   }
