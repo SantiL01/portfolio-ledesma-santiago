@@ -1,13 +1,15 @@
 // MODO OSCURO
-const btnTema = document.getElementById("btn-tema");
+const toggleTema = document.getElementById("theme");
 
-btnTema.addEventListener("click", function () {
-    document.body.classList.toggle("oscuro"); // body.oscuro en CSS
+toggleTema.addEventListener("click", function () {
+    document.body.classList.toggle("oscuro", toggleTema.checked); // body.oscuro en CSS, toggleTema.checked vale true si el interruptor está activado y false si no
+    /*
     if (document.body.classList.contains("oscuro")) {
-        btnTema.textContent = "Modo Claro";
+        toggleTema.textContent = "Modo Claro";
     } else {
-        btnTema.textContent = "Modo Oscuro";
+        toggleTema.textContent = "Modo Oscuro";
     }
+    */
 });
 
 // CONTADOR DE CARACTERES EN EL FORMULARIO DE CONTACTO
