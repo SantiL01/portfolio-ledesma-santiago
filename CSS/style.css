@@ -253,6 +253,96 @@ h2 {
   font-weight: 600;
 }
 
+/* Boton animado "Ver en GitHub" */
+.btn-github {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 0.5rem;
+  padding: 12px 36px;
+  border: 4px solid transparent;
+  border-radius: 100px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-principal);
+  background-color: transparent;
+  box-shadow: 0 0 0 2px var(--color-principal);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-github svg {
+  position: absolute;
+  width: 24px;
+  fill: var(--color-principal);
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-github .arr-1 {
+  right: 16px;
+}
+
+.btn-github .arr-2 {
+  left: -25%;
+}
+
+.btn-github .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-principal);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-github .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-github:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+.btn-github:hover .arr-1 {
+  right: -25%;
+}
+
+.btn-github:hover .arr-2 {
+  left: 16px;
+}
+
+.btn-github:hover .text {
+  transform: translateX(12px);
+}
+
+.btn-github:hover svg {
+  fill: #ffffff;
+}
+
+.btn-github:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
+.btn-github:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px var(--color-principal);
+}
+
 /* ========== 7. CONTACTO (formulario) ========== */
 #form-contacto {
   display: flex;
