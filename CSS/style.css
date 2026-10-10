@@ -1,6 +1,7 @@
 /* ========== 1. VARIABLES Y BASE ========== */
 :root {
-  --color-fondo: #f5f7fa;
+  --color-fondo: #F3F3F3;
+  --fondo-linea: #E1E1E1;
   --color-texto: #1f2933;
   --color-principal: #2563eb;
   --color-secundario: #e0e7ff;
@@ -12,11 +13,12 @@
 }
 
 body.oscuro {
-  --color-fondo: #111827;
+  --color-fondo: #191a1a;
+  --fondo-linea: rgba(114, 114, 114, 0.3);
   --color-texto: #f3f4f6;
   --color-principal: #3b82f6;
   --color-secundario: #1e293b;
-  --color-tarjeta: #1f2937;
+  --color-tarjeta: #242626;
   --color-borde: #374151;
 }
 
@@ -35,6 +37,11 @@ body {
   background-color: var(--color-fondo);
   color: var(--color-texto);
   line-height: 1.6;
+  background-image:
+    linear-gradient(0deg, transparent 24%, var(--fondo-linea) 25%, var(--fondo-linea) 26%, transparent 27%, transparent 74%, var(--fondo-linea) 75%, var(--fondo-linea) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, var(--fondo-linea) 25%, var(--fondo-linea) 26%, transparent 27%, transparent 74%, var(--fondo-linea) 75%, var(--fondo-linea) 76%, transparent 77%, transparent);
+  background-size: 55px 55px;
+  background-attachment: fixed;
 }
 
 section {
