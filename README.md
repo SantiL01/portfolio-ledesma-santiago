@@ -19,4 +19,4 @@ Portfolio personal desarrollado como actividad integradora de la Unidad 3 de Pro
 Descargar o clonar el repositorio y abrir `index.html` en el navegador.
 
 ## Sitio publicado
-[Enlace de GitHub Pages, si lo publicás]
+https://github.com/SantiL01/portfolio-ledesma-santiago.git
