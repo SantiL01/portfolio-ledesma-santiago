@@ -320,6 +320,41 @@ h2 {
   font-weight: 600;
 }
 
+.galeria {
+  margin-top: 3rem;
+}
+
+.galeria h3 {
+  margin-bottom: 1rem;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.galeria figure {
+  background-color: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+
+.galeria img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.galeria figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
 /* Boton animado "Ver en GitHub" */
 .btn-github {
   position: relative;
@@ -508,6 +543,10 @@ textarea.valido {
   }
 
   .proyectos-grid {
+    grid-template-columns: 1fr;
+  }
+
+    .galeria-grid {
     grid-template-columns: 1fr;
   }
 }
