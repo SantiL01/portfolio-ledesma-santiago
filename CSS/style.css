@@ -458,37 +458,92 @@ label {
   margin-top: 0.5rem;
 }
 
-input,
-textarea {
-  padding: 0.7rem;
-  font-family: inherit;
-  font-size: 1rem;
-  color: var(--color-texto);
-  background-color: var(--color-tarjeta);
-  border: 2px solid var(--color-borde);
-  border-radius: 8px;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--color-principal);
-}
-
 .error {
   color: #dc2626;
   font-size: 0.85rem;
   min-height: 1.2rem;
 }
 
-input.invalido,
-textarea.invalido {
-  border-color: #dc2626;
+/* Campos con linea animada */
+.campo {
+  position: relative;
+  --acento: var(--color-principal);
 }
 
-input.valido,
-textarea.valido {
-  border-color: #16a34a;
+.campo::before,
+.campo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.campo::before {
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.campo::after {
+  border-bottom: 2px solid var(--acento);
+  transform: scaleX(0);
+  transition: transform 0.25s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.campo:focus-within::after {
+  transform: scaleX(1);
+}
+
+.campo input,
+.campo textarea {
+  display: block;
+  width: 100%;
+  padding: 0.7rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--color-texto);
+  background-color: var(--color-tarjeta);
+  border: none;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s;
+}
+
+.campo textarea {
+  resize: vertical;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: none;
+  background-color: var(--color-secundario);
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+  color: var(--color-texto);
+  opacity: 0.55;
+  transition: opacity 0.25s;
+}
+
+.campo:focus-within input::placeholder,
+.campo:focus-within textarea::placeholder {
+  opacity: 0;
+}
+
+/* Estados de validacion (las clases las agrega JavaScript) */
+.campo:has(.invalido) {
+  --acento: #dc2626;
+}
+
+.campo:has(.valido) {
+  --acento: #16a34a;
+}
+
+.campo:has(.invalido)::after,
+.campo:has(.valido)::after {
+  transform: scaleX(1);
 }
 
 .resultado {
