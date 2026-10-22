@@ -1,0 +1,43 @@
+@base = http://localhost:3000/api/proyectos
+
+### Listar todos
+GET {{base}}
+
+### Traer uno
+GET {{base}}/1
+
+### Crear
+POST {{base}}
+Content-Type: application/json
+
+{
+  "nombre": "Portfolio Web",
+  "descripcion": "Mi portfolio personal con backend en Node.js y Express",
+  "tecnologias": "HTML, CSS, JavaScript, Node.js, Express, TypeScript, MySQL",
+  "enlace": "https://github.com/SantiL01/portfolio-ledesma-santiago",
+  "estado": "publicado"
+}
+
+### Crear con datos inválidos (tiene que dar 400)
+POST {{base}}
+Content-Type: application/json
+
+{
+  "nombre": "ab",
+  "estado": "cualquiera"
+}
+
+### Modificar (cambiá el 4 por el id que te devolvió el POST)
+PUT {{base}}/4
+Content-Type: application/json
+
+{
+  "nombre": "Portfolio Web",
+  "descripcion": "Mi portfolio personal con backend en Node.js y Express",
+  "tecnologias": "HTML, CSS, JavaScript, Node.js, Express, TypeScript, MySQL",
+  "enlace": "https://github.com/SantiL01/portfolio-ledesma-santiago",
+  "estado": "borrador"
+}
+
+### Eliminar (cambiá el 4 por el id que quieras borrar)
+DELETE {{base}}/4

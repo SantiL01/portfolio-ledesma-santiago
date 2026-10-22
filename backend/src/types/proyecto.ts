@@ -9,3 +9,5 @@ export interface Proyecto {
   enlace: string | null;
   estado: EstadoProyecto;
 }
+
+export type NuevoProyecto = Omit<Proyecto, "id">;
