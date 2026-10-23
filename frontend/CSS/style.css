@@ -813,3 +813,120 @@ label {
     box-shadow: 0 0 0 0.125em var(--primary);
   }
 }
+
+/* ========== 9. ADMINISTRACIÓN DE PROYECTOS (CRUD) ========== */
+.oculto {
+  display: none;
+}
+
+.btn-secundario {
+  background-color: transparent;
+  color: var(--color-principal);
+  border: 2px solid var(--color-principal);
+  margin-top: 2rem;
+}
+
+.btn-secundario::after {
+  background-color: transparent;
+}
+
+.panel-admin {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+}
+
+.panel-admin h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+.form-proyecto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 600px;
+}
+
+.campo select {
+  display: block;
+  width: 100%;
+  padding: 0.7rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--color-texto);
+  background-color: var(--color-tarjeta);
+  border: none;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.form-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.form-acciones .btn-secundario {
+  margin-top: 0;
+}
+
+.mensaje-admin {
+  font-weight: 600;
+  color: #16a34a;
+  min-height: 1.6rem;
+}
+
+.mensaje-admin.con-error {
+  color: #dc2626;
+}
+
+.lista-admin {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.lista-admin li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+}
+
+.acciones-admin {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-chico {
+  padding: 0.4em 1.2em;
+  font-size: 0.9rem;
+}
+
+.btn-peligro,
+.btn-peligro::after {
+  background-color: #dc2626;
+}
+
+.etiqueta-estado {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.1em 0.7em;
+  font-size: 0.75rem;
+  border-radius: 1em;
+  background-color: #bbf7d0;
+  color: #14532d;
+}
+
+.etiqueta-estado.borrador {
+  background-color: #fde68a;
+  color: #78350f;
+}
