@@ -30,9 +30,9 @@ function validarProyecto(datos: Partial<NuevoProyecto>): string[] {
 // GET /api/proyectos -> lista todos los proyectos
 router.get("/", async (req, res) => {
   try {
-    const [filas] = await pool.query("SELECT * FROM proyectos");
+    const [filas] = await pool.query("SELECT * FROM proyectos"); //consulta
     const proyectos = filas as Proyecto[];
-    res.json(proyectos);
+    res.json(proyectos); //responde
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Error al obtener los proyectos." });

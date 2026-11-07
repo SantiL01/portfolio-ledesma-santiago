@@ -19,7 +19,7 @@ const contador = document.getElementById("contador");
 mensaje.addEventListener("input", function () {
     const cantidad = mensaje.value.length;
     contador.textContent = cantidad + " / 300";
-    if (cantidad >= 250) {
+    if (cantidad === 300) {
         contador.style.color = "#dc2626";
     } else {
         contador.style.color = "";
